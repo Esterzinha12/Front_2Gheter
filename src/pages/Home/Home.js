@@ -21,14 +21,7 @@ useEffect(() => {
 
   return (
     <div>
-    <h1>Pokemon</h1>
-    <ul>
-      {
-        pokemon.map((poke) => {
-          return <li>{poke.name}</li>
-        })
-      }
-    </ul>
+    <Navbar/>
     </div>
   );
 }
