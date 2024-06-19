@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Navbar} from "../../components/Navbar";
+import {Sidebar} from "../../components/Sidebar";
 import axios from "axios";
 
 export function Home() {
@@ -21,7 +22,10 @@ useEffect(() => {
 
   return (
     <div>
-    <Navbar/>
+      <Navbar/>
+      <div id="view-content">
+        <Sidebar/>
+      </div>
     </div>
   );
 }

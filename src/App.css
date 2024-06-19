@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +39,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.sidebar {
+  height: 100%;
+  width: 75px;
+  position: fixed;
+  left: 0;
+  background-color: #ffffff;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: #A093EB;
+  border-radius: 20px;
 }
