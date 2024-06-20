@@ -13,9 +13,7 @@ export function Navbar() {
           <form>
             <div className="campo-pesquisa">
               <input type="search" placeholder="Pesquisar anúncios" style= {{margin: '0px'}} />
-              <FontAwesomeIcon icon={faTimes} className="icone-fechar" /> 
             </div>
-
           </form>
         </div>
         <ul className="menu-direita">

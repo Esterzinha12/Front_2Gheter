@@ -1,91 +1,80 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .barra-navegacao {
-    background-color: #6049E8;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .conteudo-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0 30px;
-  }
-  
-  .logo-nav {
-    width: 200px;
-    height: auto;
-    margin-right: auto;
-  }
-  
-  .caixa-pesquisa {
-    background-color: #6049E8;
-    border-radius: 50px;
-    width: 40%;
-    margin: 0 auto;
-  }
-  
-  .campo-pesquisa {
-    background-color: white; 
-    border-radius: 50px; 
-    display: flex; 
-    align-items: center;
-    padding: 5px; 
-    position: relative; 
-    height: 50px;
-  }
-  
-  .campo-pesquisa input {
-    border: none !important; 
-    border-bottom: none !important; 
-    outline: none !important;
-    border-radius: 50px; 
-    width: 100%; 
-    padding: 5px 10px; 
-    font-size: 16px; 
-    appearance: none; 
-    box-shadow: none !important; 
-    border-color: transparent !important; 
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-  .icone-fechar {
-    margin-left: 10px;
-    cursor: pointer;
-    color: #777; 
-    font-size: 18px; 
-  }
-  
-  .icone-fechar:hover {
-    color: #333; 
-  }
-  
-  .menu-direita {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu-direita li {
-    margin-right: 10px;
-  }
-  
-  .menu-direita a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .icone-usuario {
-    color: white;
-    font-size: 24px;
-  }
-  
- 
+.barra-navegacao {
+  background-color: #6049E8;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.logo-nav {
+  width: 200px;
+  height: auto;
+}
+
+.caixa-pesquisa {
+  background-color: #6049E8;
+  border-radius: 50px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.campo-pesquisa {
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  height: 50px;
+  width: 100%; 
+  max-width: 600px; 
+}
+
+.campo-pesquisa input {
+  border: none !important;
+  outline: none !important;
+  border-radius: 50px;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+  appearance: none;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+
+.menu-direita {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-direita li {
+  margin-right: 10px;
+}
+
+.menu-direita a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.icone-usuario {
+  color: white;
+  font-size: 24px;
+}
