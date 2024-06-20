@@ -4,26 +4,26 @@ import {Sidebar} from "../../components/Sidebar";
 import axios from "axios";
 
 export function Home() {
-const [pokemon, setPokemon] = useState([]);
+// const [pokemon, setPokemon] = useState([]);
 
 useEffect(() => {
-  const fetchPokemon = async () => {
-    try {
-      const response = await axios.get("https://pokeapi.co/api/v2/pokemon");
-      setPokemon(response.data.results);
-      console.log(pokemon);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchPokemon = async () => {
+  //   try {
+  //     const response = await axios.get("https://pokeapi.co/api/v2/pokemon");
+  //     setPokemon(response.data.results);
+  //     console.log(pokemon);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  fetchPokemon();
+  // fetchPokemon();
 }, []);
 
   return (
     <div>
       <Navbar/>
-      <div id="view-content">
+      <div >
         <Sidebar/>
       </div>
     </div>
