@@ -1,52 +1,68 @@
+
 .card-anuncio {
-    display: flex;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    max-width: 300px; /* Largura máxima do card */
-  }
-  
-  .foto-anuncio {
-    width: 100px; /* Largura da área da imagem */
-    height: 100px; /* Altura da área da imagem */
-    overflow: hidden; /* Para garantir que a imagem não ultrapasse as dimensões especificadas */
-    border-top-left-radius: 8px; /* Arredonda o canto superior esquerdo */
-    border-bottom-left-radius: 8px; /* Arredonda o canto inferior esquerdo */
-  }
-  
-  .foto-anuncio img {
-    width: 100%; /* Para ajustar a imagem dentro da área definida */
-    height: auto; /* Altura automática para manter a proporção */
-  }
-  
-  .descricao-anuncio {
-    flex: 1; /* Para ocupar o espaço restante */
-    padding: 12px; /* Espaçamento interno */
-  }
-  
-  .descricao-anuncio h2 {
-    font-size: 16px; /* Tamanho do título */
-    margin-bottom: 8px; /* Margem inferior do título */
-  }
-  
-  .descricao-anuncio p {
-    font-size: 14px; /* Tamanho do texto */
-    color: #666; /* Cor do texto */
-    margin-bottom: 12px; /* Margem inferior do texto */
-  }
-  
-  .descricao-anuncio button {
-    background-color: #6049E8;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .descricao-anuncio button:hover {
-    background-color: #5242b1;
-  }
-  
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 24px; 
+  max-width: 350px; 
+  transition: transform 0.2s ease-in-out; 
+}
+
+.card-anuncio:hover {
+  transform: translateY(-5px); 
+}
+
+
+.foto-anuncio {
+  width: 120px; 
+  height: 120px;
+  overflow: hidden;
+  border-top-left-radius: 12px; 
+  border-bottom-left-radius: 12px; 
+  background-color: #f5f5f5; 
+}
+
+.foto-anuncio img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+
+
+.descricao-anuncio {
+  flex: 1;
+  padding: 16px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.descricao-anuncio h2 {
+  font-size: 18px; 
+  color: #333;
+  margin-bottom: 8px; 
+}
+
+.descricao-anuncio p {
+  font-size: 14px; 
+  color: #777; 
+  margin-bottom: 16px; 
+}
+
+
+.descricao-anuncio button {
+  align-self: flex-start; 
+  background-color: #6049E8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.descricao-anuncio button:hover {
+  background-color: #5242b1; 
+}

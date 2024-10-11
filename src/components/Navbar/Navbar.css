@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  padding-top: 75px; /* Espaço para evitar que o conteúdo fique atrás da navbar */
 }
 
 .barra-navegacao {
@@ -9,6 +10,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .conteudo-nav {
@@ -17,6 +22,7 @@ body {
   justify-content: space-between;
   width: 100%;
   padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .logo-nav {
@@ -39,8 +45,8 @@ body {
   padding: 5px;
   position: relative;
   height: 50px;
-  width: 100%; 
-  max-width: 600px; 
+  width: 100%;
+  max-width: 600px;
 }
 
 .campo-pesquisa input {
@@ -54,7 +60,6 @@ body {
   box-shadow: none !important;
   border-color: transparent !important;
 }
-
 
 .menu-direita {
   display: flex;

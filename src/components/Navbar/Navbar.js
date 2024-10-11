@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faTimes } from '@fortawesome/free-solid-svg-icons'; 
-import logo from '../Navbar/LOGO.svg';
+import logo from '../../images/LOGO.svg';
 import './Navbar.css';
 
 export function Navbar() {

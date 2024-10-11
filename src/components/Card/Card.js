@@ -1,5 +1,5 @@
 import React from "react";
-import './Card.css'; // Arquivo de estilos do card de anúncio
+import './Card.css'; 
 
 function Card(props) {
   return (
