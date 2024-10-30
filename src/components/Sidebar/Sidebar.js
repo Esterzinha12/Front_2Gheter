@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faBars, faMagnifyingGlass, faSquarePlus, faFileSignature, faMessage, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faBars, faPlus, faFile, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import './Sidebar.css';
 
 export function Sidebar({ isHome }) {
@@ -26,13 +26,13 @@ export function Sidebar({ isHome }) {
         </li>
         <li>
           <a href="#">
-            <FontAwesomeIcon icon={faSquarePlus} size="xl" className="icone" />
+            <FontAwesomeIcon icon={faPlus} size="xl" className="icone" />
             {isExpanded && <span className="tab-name">Meus anúncios</span>}
           </a>
         </li>
         <li>
           <a href="#">
-            <FontAwesomeIcon icon={faFileSignature} size="xl" className="icone" />
+            <FontAwesomeIcon icon={faFile} size="xl" className="icone" />
             {isExpanded && <span className="tab-name">Contratos</span>}
           </a>
         </li>
