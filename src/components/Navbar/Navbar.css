@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  padding-top: 75px; /* Espaço para evitar que o conteúdo fique atrás da navbar */
+  padding-top: 75px; 
 }
 
 .barra-navegacao {
@@ -13,7 +13,6 @@ body {
   position: fixed; 
   top: 0;
   width: 100%;
-  z-index: 1000;
 }
 
 .conteudo-nav {

@@ -1,8 +1,6 @@
-/* Sidebar.css */
-
 .barra-lateral {
   background-color: #6049E8;
-  width: 60px;
+  width: 60px; 
   height: calc(100vh - 75px);
   position: fixed;
   top: 75px;
@@ -11,6 +9,11 @@
   justify-content: space-between; 
   transition: width 0.3s, height 0.3s;
   z-index: 999;
+  overflow: hidden;
+}
+
+.barra-lateral.expanded {
+  width: 200px;
 }
 
 ul {
@@ -21,7 +24,6 @@ ul {
 
 li {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 60px;
 }
@@ -30,10 +32,13 @@ a {
   text-decoration: none;
   color: white;
   position: relative;
-  padding: 10px;
+  padding: 10px; 
   margin: 5px;
   border-radius: 8px;
   transition: background-color 0.3s;
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
 }
 
 a.active {
@@ -44,15 +49,29 @@ a.active {
 .icone {
   color: white;
   transition: color 0.3s;
+  width: 30px; 
 }
 
-a.active .icone {
-  transform: scale(1.1);
+.tab-name {
+  margin-left: 10px;
+  color: white; 
+  display: inline; 
+  opacity: 0; 
+  transition: opacity 0.3s; 
+}
+
+.barra-lateral.expanded .tab-name {
+  opacity: 1; 
 }
 
 .logout-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; 
   align-items: center;
   height: 60px; 
 }
+
+.logout-container a {
+  width: 100%; 
+}
+
