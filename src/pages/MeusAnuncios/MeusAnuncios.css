@@ -111,18 +111,18 @@
   }
   
   .anunciar-button {
-    background-color: #6b00ff;
+    background: #6049E8; 
     color: white;
-    padding: 0.5rem 1rem;
     border: none;
-    border-radius: 20px;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s ease;
   }
   
   .anunciar-button:hover {
-    background-color: #4a00cc; /* Darker shade for hover effect */
+    background: #4a3bb6; 
   }
   

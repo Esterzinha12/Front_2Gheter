@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faBars, faPlus, faFile, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 import './Sidebar.css';
 
-export function Sidebar({ isHome }) {
+export function Sidebar({ activePage }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleSidebar = () => {
@@ -19,22 +20,22 @@ export function Sidebar({ isHome }) {
           </a>
         </li>
         <li>
-          <a href="#" className={isHome ? 'active' : ''}>
-            <FontAwesomeIcon icon={faHouse} size="xl" className={`icone ${isHome ? 'hover' : ''}`} />
+          <Link to="/home" className={activePage === "home" ? 'active' : ''}>
+            <FontAwesomeIcon icon={faHouse} size="xl" className={`icone ${activePage === "home" ? 'hover' : ''}`} />
             {isExpanded && <span className="tab-name">Home</span>}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
-            <FontAwesomeIcon icon={faPlus} size="xl" className="icone" />
+          <Link to="/meus-anuncios" className={activePage === "meus-anuncios" ? 'active' : ''}>
+            <FontAwesomeIcon icon={faPlus} size="xl" className={`icone ${activePage === "meus-anuncios" ? 'hover' : ''}`} />
             {isExpanded && <span className="tab-name">Meus anúncios</span>}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
-            <FontAwesomeIcon icon={faFile} size="xl" className="icone" />
+          <Link to="/contratos" className={activePage === "contratos" ? 'active' : ''}>
+            <FontAwesomeIcon icon={faFile} size="xl" className={`icone ${activePage === "contratos" ? 'hover' : ''}`} />
             {isExpanded && <span className="tab-name">Contratos</span>}
-          </a>
+          </Link>
         </li>
       </ul>
       <div className="logout-container">

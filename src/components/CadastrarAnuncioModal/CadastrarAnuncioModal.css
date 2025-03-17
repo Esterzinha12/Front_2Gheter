@@ -1,0 +1,148 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; 
+}
+
+.modal-overlay.visible { 
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-container {
+  width: 85%;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #6049E8;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6049E8;
+  margin-bottom: 10px;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.progress-step {
+  width: 50px;
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.progress-step.active {
+  background: #6049E8;
+}
+
+.tab-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #555;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+textarea {
+  height: 80px;
+}
+
+.continue-button, .save-button, .back-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.continue-button, .save-button {
+  background: #6049E8;
+}
+
+.back-button {
+  background: #aaa;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.image-upload-container {
+  width: 100%;
+  height: 100px;
+  border: 1px dashed #6049E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.image-list {
+  width: 100%;
+}
+
+.image-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.image-actions button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-button {
+  color: red;
+}
