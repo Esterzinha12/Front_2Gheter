@@ -4,13 +4,36 @@ import './Login.css';
 import logo from '../../images/LOGO.svg'; 
 
 export function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState(""); // Estado para mensagens de erro
   const navigate = useNavigate();
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
-    navigate("/home");
+    setError("");
+
+    try {
+      const response = await fetch("http://localhost:3000/usuario/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, senha }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem("usuario", JSON.stringify(data));
+        navigate("/home");
+      } else {
+        setError(data.message || "Erro desconhecido ao tentar login.");
+      }
+    } catch (error) {
+      setError("Erro ao conectar com o servidor. Tente novamente.");
+      console.error("Erro na requisição:", error);
+    }
   };
 
   return (
@@ -28,8 +51,8 @@ export function Login() {
                 <input
                   type="text"
                   id="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -38,8 +61,8 @@ export function Login() {
                 <input
                   type="password"
                   id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={senha}
+                  onChange={(e) => setSenha(e.target.value)}
                   required
                 />
                 <a href="#" className="login-senha-esquecida">Esqueceu a senha?</a>
