@@ -21,6 +21,7 @@
     color: #333;
     text-align: left;
     margin: 100px 20px 50px 20px;
+    font-weight: bold;
 }
 
 .lista-cards {
@@ -103,14 +104,15 @@
 .home-descricao-anuncio button:hover {
     background-color: #5242b1;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-  }
+}
   
-  .anunciar-button {
+.anunciar-button {
     background: #6049E8; 
     color: white;
     border: none;
@@ -120,9 +122,14 @@
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease;
-  }
+}
   
-  .anunciar-button:hover {
+.anunciar-button:hover {
     background: #4a3bb6; 
-  }
-  
+}
+
+
+.body {
+    position: relative;
+    z-index: 1;
+}
