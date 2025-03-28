@@ -6,7 +6,7 @@ import logo from '../../images/LOGO.svg';
 export function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [error, setError] = useState(""); // Estado para mensagens de erro
+  const [error, setError] = useState(""); 
   const navigate = useNavigate();
 
   const handleLogin = async (event) => {
@@ -69,8 +69,8 @@ export function Login() {
               </div>
               <div className="login-acoes">
                 <button type="submit" className="login-botao">Entrar</button>
-                <a href="#" className="login-link-cadastrar">Cadastrar-se</a>
-              </div>
+                <button className="login-link-cadastrar" onClick={() => navigate("/cadastroUsuario")}>Cadastrar-se</button>
+              </div> 
             </form>
           </div>
         </div>
