@@ -1,16 +1,16 @@
 import React from "react";
-import './Card.css'; 
+import "./Card.css";
 
-function Card(props) {
+function Card({ imagem, titulo, descricao, onVerMaisClick }) {
   return (
     <div className="card-anuncio">
       <div className="foto-anuncio">
-        <img src={props.imagem} alt="Anúncio" />
+        <img src={imagem} alt="Anúncio" />
       </div>
       <div className="descricao-anuncio">
-        <h2>{props.titulo}</h2>
-        <p>{props.descricao}</p>
-        <button>Ver mais</button>
+        <h2>{titulo}</h2>
+        <p>{descricao}</p>
+        <button onClick={onVerMaisClick}>Ver mais</button>
       </div>
     </div>
   );
