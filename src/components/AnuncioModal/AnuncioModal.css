@@ -1,13 +1,13 @@
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;  /* Garante que está visível */
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 9999 !important;  /* Para ficar acima de tudo */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro para teste */
+  width: 100vw;
+  height: 100vh;
 }
 
 .modal-content {

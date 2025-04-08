@@ -11,6 +11,8 @@ export function Home() {
   const [anuncioSelecionado, setAnuncioSelecionado] = useState(null);
 
   const abrirModal = (anuncio) => {
+    console.log("Modal Aberto?", true); 
+    console.log("Anúncio Selecionado:", anuncio);
     setAnuncioSelecionado(anuncio);
     setModalAberto(true);
   };
@@ -25,6 +27,9 @@ export function Home() {
     { id: 2, imagem: imagemExemplo, titulo: "Título do Anúncio 2", descricao: "Descrição breve do anúncio 2." },
     { id: 3, imagem: imagemExemplo, titulo: "Título do Anúncio 3", descricao: "Descrição breve do anúncio 3." },
   ];
+
+  console.log("Modal Aberto?", modalAberto);
+console.log("Anúncio Selecionado:", anuncioSelecionado);
 
   return (
     <div className="home-body">
@@ -47,9 +52,11 @@ export function Home() {
         </div>
       </div>
 
-      {modalAberto && (
-        <AnuncioModal anuncio={anuncioSelecionado} onClose={fecharModal} />
-      )}
+      <AnuncioModal 
+        anuncio={anuncioSelecionado} 
+        isOpen={modalAberto} 
+        onClose={fecharModal} 
+      />
     </div>
   );
 }
