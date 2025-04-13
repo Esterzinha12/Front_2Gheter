@@ -14,7 +14,7 @@ export function Login() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3000/usuario/login", {
+      const response = await fetch("http://localhost:3030/usuario/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,6 +67,7 @@ export function Login() {
                 />
                 <a href="#" className="login-senha-esquecida">Esqueceu a senha?</a>
               </div>
+              {error && <p className="login-erro">{error}</p>}
               <div className="login-acoes">
                 <button type="submit" className="login-botao">Entrar</button>
                 <button className="login-link-cadastrar" onClick={() => navigate("/cadastroUsuario")}>Cadastrar-se</button>
