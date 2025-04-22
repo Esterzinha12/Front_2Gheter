@@ -17,7 +17,7 @@ export function Cadastro() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3000/usuario/cadastro", {
+      const response = await fetch("http://localhost:3030/usuario/cadastrar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export function Cadastro() {
       const data = await response.json();
 
       if (response.ok) {
-        navigate("/login");
+        navigate("/");
       } else {
         setError(data.message || "Erro desconhecido ao tentar cadastrar.");
       }
