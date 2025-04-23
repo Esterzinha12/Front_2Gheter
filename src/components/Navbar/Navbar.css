@@ -1,6 +1,7 @@
+@import "@fontsource/inter";
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   padding-top: 75px; 
 }
 

@@ -1,3 +1,8 @@
+@import "@fontsource/inter";
+body{
+  font-family: 'Inter', sans-serif;
+}
+
 .card-anuncio {
   display: flex;
   background-color: #fff;

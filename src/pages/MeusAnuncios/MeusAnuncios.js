@@ -10,13 +10,12 @@ export function MeusAnuncios() {
   const [modalVisivel, setModalVisivel] = useState(false);
 
   const abrirModal = () => {
-    console.log("Abrindo modal..."); // Debug
+    console.log("Abrindo modal..."); 
     setModalVisivel(true);
   };
 
   const fecharModal = () => {
-    console.log("Fechando modal..."); // Debug
-    setModalVisivel(false);
+    console.log("Fechando modal..."); 
   };
 
   return (
@@ -26,7 +25,7 @@ export function MeusAnuncios() {
         <Sidebar isHome={false} />
         <div className="conteudo-principal">
           <div className="header">
-            <h1>Meus anúncios</h1>
+          <h1 style={{ fontFamily: 'Inter, sans-serif' }}>Meus Anúncios</h1>
             <button className="anunciar-button" onClick={abrirModal} type="button">
               Anunciar
             </button>

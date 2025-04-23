@@ -1,5 +1,6 @@
-.body {
-    font-family: 'Roboto', sans-serif;
+@import "@fontsource/inter";
+body {
+    font-family: 'Inter', sans-serif;
 }
 
 .layout {

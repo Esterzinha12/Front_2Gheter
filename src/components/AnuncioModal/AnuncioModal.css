@@ -1,51 +1,94 @@
+@import "@fontsource/inter";
+body{
+  font-family: 'Inter', sans-serif;
+}
+
 .modal-overlay {
-  display: flex !important;  /* Garante que está visível */
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 9999 !important;  /* Para ficar acima de tudo */
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro para teste */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  max-height: 200px;
 }
 
 .modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 400px;
-  max-width: 90%;
-  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: left;
 }
 
-.close-button {
+.modal-close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
+  top: 20px;
+  right: 20px;
+  background: transparent;
   border: none;
-  font-size: 18px;
+  font-size: 1.25rem;
+  color: #666;
   cursor: pointer;
 }
 
-.modal-info {
-  margin: 10px 0;
-  font-size: 14px;
+.modal-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
 }
 
-.modal-contact {
-  background-color: #6049E8;
+.modal-description {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.modal-info-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.modal-info-group p {
+  margin: 0.2rem 0;
+  color: #333;
+}
+
+.modal-contact-button {
+  background-color: #6049e8;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
-  margin-top: 10px;
   transition: background-color 0.3s ease;
+  float: right;
 }
 
-.modal-contact:hover {
-  background-color: #5242b1;
+.modal-contact-button:hover {
+  background-color: #4a3bc4;
 }

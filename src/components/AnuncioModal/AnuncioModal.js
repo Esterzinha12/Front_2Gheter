@@ -9,28 +9,28 @@ export function AnuncioModal({ anuncio, isOpen, onClose }) {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="modal-close" onClick={onClose}>
-          <FontAwesomeIcon icon={faTimes} />
-        </button>
-        <h2>{anuncio.titulo}</h2>
-        <p>{anuncio.descricao}</p>
+  <button className="modal-close-button" onClick={onClose} aria-label="Fechar modal">
+    <FontAwesomeIcon icon={faTimes} />
+  </button>
 
-        <div className="modal-info">
-          <strong>Localização:</strong> {anuncio.localizacao}
-        </div>
-        <div className="modal-info">
-          <strong>Oferecido por:</strong> {anuncio.oferecidoPor}
-        </div>
-        <div className="modal-info">
-          <strong>E-mail:</strong> {anuncio.email}
-        </div>
-        <div className="modal-info">
-          <strong>Telefone:</strong> {anuncio.telefone}
-        </div>
+  {anuncio.imagem && (
+    <img src={anuncio.imagem} alt={anuncio.titulo} className="modal-image" />
+  )}
 
-        <button className="modal-contact">Entrar em contato</button>
-      </div>
+  <h2 className="modal-title">{anuncio.titulo}</h2>
+  <p className="modal-description">{anuncio.descricao}</p>
+
+  <div className="modal-info-group">
+    <p><strong>Localização:</strong> {anuncio.localizacao}</p>
+    <p><strong>Oferecido por:</strong> {anuncio.oferecidoPor}</p>
+    <p><strong>E-mail:</strong> {anuncio.email}</p>
+    <p><strong>Telefone:</strong> {anuncio.telefone}</p>
+  </div>
+
+  <button className="modal-contact-button">Entrar em contato</button>
+</div>
     </div>
   );
 }
+
 export default AnuncioModal;

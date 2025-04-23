@@ -5,6 +5,7 @@ import Card from "../../components/Card/Card";
 import { AnuncioModal } from "../../components/AnuncioModal/AnuncioModal";
 import imagemExemplo from "../../components/Card/imagem.jpg";
 import "./Home.css";
+import "@fontsource/inter";
 
 export function Home() {
   const [modalAberto, setModalAberto] = useState(false);
@@ -37,7 +38,7 @@ console.log("Anúncio Selecionado:", anuncioSelecionado);
       <div className="home-layout">
         <Sidebar isHome={true} />
         <div className="home-conteudo-principal">
-          <h1>Lista de Anúncios</h1>
+        <h1 style={{ fontFamily: 'Inter, sans-serif' }}>Lista de Anúncios</h1>
           <div className="home-lista-cards">
             {anuncios.map((anuncio) => (
               <Card
