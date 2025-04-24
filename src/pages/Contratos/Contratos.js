@@ -3,6 +3,7 @@ import { Navbar } from "../../components/Navbar";
 import { Sidebar } from "../../components/Sidebar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faTrash } from '@fortawesome/free-solid-svg-icons';
+import InserirContratoModal from "../../components/InserirContratoModal/InserirContratoModal";
 import "./Contratos.css";
 
 export function Contratos() {
@@ -11,6 +12,7 @@ export function Contratos() {
     { id: 2, nome: "contrato_prefeitura_04-23" },
     { id: 3, nome: "contrato_duasRodas_01-23" },
   ]);
+  const [modalAberto, setModalAberto] = useState(false);
 
   return (
     <div className="body">
@@ -20,9 +22,13 @@ export function Contratos() {
         <div className="conteudo-principal">
           <div className="header">
             <h1>Contratos</h1>
-            <button className="adicionar-button" type="button">
-              + Adicionar
-            </button>
+            <button
+  className="adicionar-button"
+  type="button"
+  onClick={() => setModalAberto(true)}
+>
+  + Adicionar
+</button>
           </div>
           <table className="tabela-contratos">
             <thead>
@@ -43,6 +49,7 @@ export function Contratos() {
               ))}
             </tbody>
           </table>
+          <InserirContratoModal visible={modalAberto} onClose={() => setModalAberto(false)} />
         </div>
       </div>
     </div>
