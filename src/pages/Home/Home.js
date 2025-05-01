@@ -6,28 +6,44 @@ import { AnuncioModal } from "../../components/AnuncioModal/AnuncioModal";
 import imagemExemplo from "../../components/Card/imagem.jpg";
 import "./Home.css";
 import "@fontsource/inter";
+import axios from "axios";
 
 export function Home() {
   const [modalAberto, setModalAberto] = useState(false);
   const [anuncioSelecionado, setAnuncioSelecionado] = useState(null);
+  const [anuncios, setAnuncios] = useState([]);
+ 
+  useEffect(() => {
+    axios
+      .get("http://localhost:3030/anuncio/buscar-todos") 
+      .then((res) => {
+        setAnuncios(res.data);
+      })
+      .catch((err) => {
+        console.error("Erro ao buscar anúncios:", err);
+      });
+  }, []);
+
 
   const abrirModal = (anuncio) => {
-    console.log("Modal Aberto?", true); 
-    console.log("Anúncio Selecionado:", anuncio);
-    setAnuncioSelecionado(anuncio);
-    setModalAberto(true);
-  };
+     setAnuncioSelecionado(anuncio);
+     setModalAberto(true);
+     axios
+       .get(`http://localhost:3030/anuncio/buscar/${anuncio.id}`)
+       .then((res) => {
+         setAnuncioSelecionado(res.data);
+         setModalAberto(true);
+       })
+       .catch((err) => {
+         console.error("Erro ao buscar anúncio:", err);
+       });
+   };
+
 
   const fecharModal = () => {
     setModalAberto(false);
     setAnuncioSelecionado(null);
   };
-
-  const anuncios = [
-    { id: 1, imagem: imagemExemplo, titulo: "Título do Anúncio 1", descricao: "Descrição breve do anúncio 1." },
-    { id: 2, imagem: imagemExemplo, titulo: "Título do Anúncio 2", descricao: "Descrição breve do anúncio 2." },
-    { id: 3, imagem: imagemExemplo, titulo: "Título do Anúncio 3", descricao: "Descrição breve do anúncio 3." },
-  ];
 
   console.log("Modal Aberto?", modalAberto);
 console.log("Anúncio Selecionado:", anuncioSelecionado);
@@ -43,7 +59,7 @@ console.log("Anúncio Selecionado:", anuncioSelecionado);
             {anuncios.map((anuncio) => (
               <Card
                 key={anuncio.id}
-                imagem={anuncio.imagem}
+                imagem={imagemExemplo}
                 titulo={anuncio.titulo}
                 descricao={anuncio.descricao}
                 onVerMaisClick={() => abrirModal(anuncio)}
